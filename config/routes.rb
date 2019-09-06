@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :sessions
   resources :plans
   resources :reviews
   resources :restaurants
