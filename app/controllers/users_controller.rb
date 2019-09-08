@@ -1,14 +1,18 @@
+require 'byebug'
+
 class UsersController < ApplicationController
     def index
         users = User.all
-        render json: UserSerializer.new(users)
+        render json: users, except: [:created_at, :updated_at]
     end
     def new
         @user = User.new()
     end
 
     def create
-        @user = User.create(user_params)
+        byebug
+        @user = User.create!(user_params)
+          
     end
 
     def update
