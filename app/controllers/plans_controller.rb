@@ -1,6 +1,7 @@
 class PlansController < ApplicationController
     def index
-    @plans = Plan.all
+    plans = Plan.all
+    render json: plans, except: [:created_at, :updated_at]
     end
     def new
         @plan = Plan.new()
