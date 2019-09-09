@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
     def index
         restaurants = Restaurant.all
-        render json: RestaurantSerializer.new(restaurants)
+        render json: restaurants, except: [:created_at, :updated_at]
     end
     def new
         @restaurant = Restaurant.new()
