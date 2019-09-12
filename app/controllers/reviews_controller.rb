@@ -8,7 +8,8 @@ class ReviewsController < ApplicationController
     end
     
     def create
-        @review = Review.create(review_params)
+        review = Review.create(review_params)
+        render json: review
     
     end
     
@@ -23,7 +24,7 @@ class ReviewsController < ApplicationController
 
     private 
     def review_params
-        params.require(:review).permit(:rating, user_ids: [], restaurant_ids: [] )
+        params.require(:review).permit(:user_id, :restaurant_id, :rating )
 
     end
     # params.require(:review).permit(:rating, user_id: [:first_name, :last_name, :email, :password, :username], restaurant_id: [:name

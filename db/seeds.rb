@@ -1,15 +1,12 @@
 require 'faker'
-# User.delete_all
-# Restaurant.delete_all
-# Plan.delete_all
-# Review.delete_all
+#  
 
 Price = ['$', '$$', '$$$', '$$$$']
 
-Pics = []
-300.times do 
-    Pics << Faker::LoremPixel.image(size: "200x300", is_gray: false, category: 'food')
-end
+# Pics = []
+# 300.times do 
+#     Pics << Faker::LoremPixel.image(size: "200x300", is_gray: false, category: 'food')
+# end
 
 
 
@@ -58,13 +55,13 @@ end
 #     name: Faker::Lorem.word )
 #   end
 
-# #   5.times do 
-# #     Plan.create(
-# #     date: Faker::Date.between_except(from: 1.year.ago, to: 1.year.from_now, excepted: Date.today), 
-# #     user_id: 1, 
-# #     restaurant_id: Restaurant.all.sample.id, 
-# #     name: Faker::Lorem.word )
-# #   end
+#   5.times do 
+#     Plan.create(
+#     date: Faker::Date.between_except(from: 1.year.ago, to: 1.year.from_now, excepted: Date.today), 
+#     user_id: 1, 
+#     restaurant_id: Restaurant.all.sample.id, 
+#     name: Faker::Lorem.word )
+#   end
 
   
 #   100.times do 
@@ -76,7 +73,7 @@ end
 
 
 
-  @jesse = User.find_by(id: 2013 )
+  @jesse = User.find_by(id: 101 )
 
   40.times do 
   

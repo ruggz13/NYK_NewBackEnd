@@ -8,7 +8,8 @@ class PlansController < ApplicationController
     end
     
     def create
-        @plan = Plan.create(plans_params)
+    plan = Plan.create(plans_params)
+    render json: plan 
     end
     
     def update
