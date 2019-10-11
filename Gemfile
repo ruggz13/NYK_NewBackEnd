@@ -21,7 +21,7 @@ gem 'pry'
 gem 'rest-client'
 gem 'json'
 gem 'devise'
-
+gem 'jwt'
 gem 'geocoder'
 
 # Use Capistrano for deployment

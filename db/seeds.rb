@@ -71,13 +71,14 @@ end
     Plan.create(
     date: Faker::Date.between_except(from: 1.year.ago, to: 1.year.from_now, excepted: Date.today), 
     user_id: User.all.sample.id, 
-    restaurant_id: Restaurant.all.sample.id, 
+    restaurant_id: Restaurant.all.sample.id,
     name: Faker::Lorem.word )
   end
 
   
   40.times do 
-    Review.create(user_id: User.all.sample.id, restaurant_id: Restaurant.all.sample.id, rating: Faker::Number.within(range: 1..5))
+    Review.create(
+       user_id: User.all.sample.id, restaurant_id: Restaurant.all.sample.id, rating: Faker::Number.within(range: 1..5))
   end
 
  

@@ -4,10 +4,11 @@ class UsersController < ApplicationController
     before_action :authenticate_user!, except: [:index, :show, :create, :new]
     def index 
         users = User.all
-        render json: users
+        render json: users.to_json( 
+            include: [:plans, :reviews])
         if user_signed_in?
             render json: current_user.to_json( 
-                include: [:ratings, :orders, :reviews, :favorites ])
+                include: [:plans, :reviews])
         end
     end
     def is_signed_in?
