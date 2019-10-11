@@ -1,12 +1,15 @@
 require 'faker'
-#  
+# User.delete_all
+# Restaurant.delete_all
+# Plan.delete_all
+# Review.delete_all
 
 Price = ['$', '$$', '$$$', '$$$$']
 
-# Pics = []
-# 300.times do 
-#     Pics << Faker::LoremPixel.image(size: "200x300", is_gray: false, category: 'food')
-# end
+Pics = []
+300.times do 
+    Pics << Faker::LoremPixel.image(size: "200x300", is_gray: false, category: 'food')
+end
 
 
 
