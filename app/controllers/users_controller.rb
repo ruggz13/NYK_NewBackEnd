@@ -3,7 +3,8 @@ require 'byebug'
 class UsersController < ApplicationController
     def index
         users = User.all
-        render json: users, except: [:created_at, :updated_at]
+        user_signed_in?
+        render json: current_user include: [:user_session]
     end
     def new
         @user = User.new()

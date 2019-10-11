@@ -21,7 +21,7 @@ STATES = ["WestVirginia", "Minnesota", "Tennessee", "Maryland", "Connecticut", "
 Price = ['$', '$$', '$$$', '$$$$']
 50.times do 
     state = STATES.sample
-    url2 = "https://api.yelp.com/v3/businesses/search?categories=foodall&location=Washingtondc&limit=50"
+    url2 = "https://api.yelp.com/v3/businesses/search?categories=Restaurants&location=Washingtondc&limit=50"
     response2 = RestClient.get(url2, headers={Authorization: "Bearer #{Rails.application.credentials[:yelp][:api_key]}"})
     # ENV["YELP_API_KEY"]
     # Rails.application.credentials[:yelp][:api_key]
