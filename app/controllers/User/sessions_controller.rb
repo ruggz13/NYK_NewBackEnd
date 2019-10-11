@@ -16,7 +16,7 @@ class User::SessionsController < Devise::SessionsController
       render json: {
       authenticated: true,
       message: "You are logging in...",
-      user: @user,
+      user: UsersSerializer.new(@user),
       token: token
     }, status: :accepted
   end

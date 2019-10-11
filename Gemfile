@@ -13,6 +13,7 @@ gem 'puma', '~> 3.11'
 # gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
+gem 'active_model_serializers', '~> 0.10.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'pry'
@@ -28,7 +29,7 @@ gem 'geocoder'
 # gem 'capistrano-rails', group: :development
 gem 'devise'
 gem 'faker'
-gem 'fast_jsonapi'
+# gem 'fast_jsonapi'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
